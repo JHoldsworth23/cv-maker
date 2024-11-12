@@ -1,33 +1,18 @@
-import { useState } from 'react'
 import './styles/App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src="" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src="" className="logo react" alt="React logo" />
-        </a>
+        FORM SIDE
+        {/* EXAMPLE LOADER */}
+        <div>
+          {/* FORM FOR EACH SECTION */}
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        DISPLAY CV
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
-
-export default App
