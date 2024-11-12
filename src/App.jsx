@@ -1,3 +1,4 @@
+import ExampleLoader from './components/example-loader';
 import './styles/App.css'
 
 export default function App() {
@@ -5,7 +6,7 @@ export default function App() {
     <>
       <div>
         FORM SIDE
-        {/* EXAMPLE LOADER */}
+        <ExampleLoader />
         <div>
           {/* FORM FOR EACH SECTION */}
         </div>
