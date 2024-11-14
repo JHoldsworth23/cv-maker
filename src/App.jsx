@@ -7,6 +7,14 @@ import './styles/App.css';
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
 
+  function loadExample() {
+    setPersonalInfo(exampleData.personal);
+  }
+
+  function clearForm() {
+    setPersonalInfo({ fullName: "", phoneNo: "", email: "", address: "" });
+  }
+
   function changePersonalInfo(event) {
     setPersonalInfo({...personalInfo, [event.target.dataset.info]: event.target.value});
   }
@@ -16,7 +24,7 @@ export default function App() {
       <div>
         FORM SIDE
         {/* TODO: ADD TWO FUNCTIONS FOR BUTTONS */}
-        <ExampleLoader />
+        <ExampleLoader load={loadExample} clear={clearForm}/>
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
           {/* FORM FOR EACH SECTION */}
