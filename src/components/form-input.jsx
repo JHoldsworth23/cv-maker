@@ -4,7 +4,8 @@ export default function FormInput({
     type,
     labelText,
     placeholder,
-    value
+    value,
+    onChange
 }) {
     return (
         <div>
@@ -16,8 +17,8 @@ export default function FormInput({
               type={type}
               placeholder={placeholder}
               value={value}
+              onChange={onChange}
             />
-            {/* onChange function when input value updates */}
         </div>
     );
 }
