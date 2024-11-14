@@ -1,3 +1,23 @@
-button {
-    background-color: crimson;
+.btn-container {
+    width: min-content;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: #F2F0EA;
+    padding: 20px 30px;
+    border-radius: 14px;
+}
+
+.load-btn, .clear-btn {
+    width: max-content;
+    font-size: 1rem;
+    background-color: #17236A;
+    border: 3px solid #17236A;
+    transition: all 0.25s ease-in-out;
+}
+
+.load-btn:hover, .clear-btn:hover {
+    color: #17236A;
+    border-color: #17236A;
+    background-color: #F2F0EA;
 }

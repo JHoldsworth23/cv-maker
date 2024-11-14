@@ -23,7 +23,6 @@ export default function App() {
     <>
       <div>
         FORM SIDE
-        {/* TODO: ADD TWO FUNCTIONS FOR BUTTONS */}
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
