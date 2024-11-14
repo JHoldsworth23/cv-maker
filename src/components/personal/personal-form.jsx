@@ -19,6 +19,7 @@ export default function PersonalForm({
                   placeholder="Enter your full name"
                   value={fullName}
                   onChange={onChange}
+                  data-info="fullName"
                 />
                 <FormInput 
                   id="email"
@@ -27,6 +28,7 @@ export default function PersonalForm({
                   placeholder="Enter your email address"
                   value={email}
                   onChange={onChange}
+                  data-info="email"
                 />
                 <FormInput 
                   id="phoneNo"
@@ -35,6 +37,7 @@ export default function PersonalForm({
                   placeholder="Enter your phone number"
                   value={phoneNo}
                   onChange={onChange}
+                  data-info="phoneNo"
                 />
                 <FormInput 
                   id="address"
@@ -43,6 +46,7 @@ export default function PersonalForm({
                   placeholder="City, County or Country"
                   value={address}
                   onChange={onChange}
+                  data-info="address"
                 />
             </form>
         </div>

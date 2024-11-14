@@ -5,7 +5,8 @@ export default function FormInput({
     labelText,
     placeholder,
     value,
-    onChange
+    "data-info": info,
+    onChange,
 }) {
     return (
         <div>
@@ -18,6 +19,7 @@ export default function FormInput({
               placeholder={placeholder}
               value={value}
               onChange={onChange}
+              data-info={info}
             />
         </div>
     );
