@@ -1,8 +1,16 @@
+import { useState } from 'react';
+import { exampleData } from './example-data';
 import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import './styles/App.css';
 
 export default function App() {
+  const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
+
+  function changePersonalInfo(event) {
+    setPersonalInfo({...personalInfo, [event.target.dataset.info]: event.target.value});
+  }
+
   return (
     <>
       <div>
@@ -10,7 +18,7 @@ export default function App() {
         {/* TODO: ADD TWO FUNCTIONS FOR BUTTONS */}
         <ExampleLoader />
         <div>
-          <PersonalForm />
+          <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
           {/* FORM FOR EACH SECTION */}
         </div>
       </div>
