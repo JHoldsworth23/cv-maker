@@ -1,4 +1,8 @@
 .personal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
     background-color: crimson;
     padding: 12px 26px 20px;
     border-radius: 14px;
@@ -6,9 +10,8 @@
 }
 
 .form-heading {
+    font-size: 1.6rem;
     text-align: start;
-    text-transform: uppercase;
     letter-spacing: 1.2px;
-    margin: 0;
-    margin-bottom: 6px;
+    margin: 6px 0;
 }
