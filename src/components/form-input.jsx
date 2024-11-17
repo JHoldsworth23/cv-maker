@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import "../styles/form-input.css"
+
 export default function FormInput({
     id, 
     type,
@@ -9,7 +11,7 @@ export default function FormInput({
     onChange,
 }) {
     return (
-        <div>
+        <div className="input-container">
             <label htmlFor={id}>
                 {labelText}
             </label>
