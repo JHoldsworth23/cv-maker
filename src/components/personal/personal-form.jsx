@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
+import "../../styles/personal-form.css";
 
 export default function PersonalForm({
     fullName,
@@ -9,9 +10,9 @@ export default function PersonalForm({
     onChange
 }) {
     return (
-        <div>
-            <form>
-                <h2>Personal Details</h2>
+        <div className="form-container">
+            <form className="personal-form">
+                <h2 className="form-heading">Personal Details</h2>
                 <FormInput 
                   id="fullName"
                   type="text"

@@ -1,0 +1,14 @@
+.personal-form {
+    background-color: crimson;
+    padding: 12px 26px 20px;
+    border-radius: 14px;
+    margin: 16px 0;
+}
+
+.form-heading {
+    text-align: start;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+    margin-bottom: 6px;
+}
