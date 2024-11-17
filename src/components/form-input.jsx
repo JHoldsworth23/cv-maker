@@ -3,7 +3,7 @@ import "../styles/form-input.css"
 
 export default function FormInput({
     id, 
-    type,
+    type="text",
     labelText,
     placeholder,
     value,
