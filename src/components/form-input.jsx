@@ -8,12 +8,14 @@ export default function FormInput({
     placeholder,
     value,
     "data-info": info,
+    recommended,
     onChange,
 }) {
     return (
         <div className="input-container">
             <label htmlFor={id}>
                 {labelText}
+                {recommended && <span className="recommended">recommended</span>}
             </label>
             <input
               id={id}

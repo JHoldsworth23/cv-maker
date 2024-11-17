@@ -28,6 +28,7 @@ export default function PersonalForm({
               value={email}
               onChange={onChange}
               data-info="email"
+              recommended
             />
             <FormInput 
               id="phoneNo"
@@ -37,6 +38,7 @@ export default function PersonalForm({
               value={phoneNo}
               onChange={onChange}
               data-info="phoneNo"
+              recommended
             />
             <FormInput 
               id="address"
@@ -45,6 +47,7 @@ export default function PersonalForm({
               value={address}
               onChange={onChange}
               data-info="address"
+              recommended
             />
         </form>
     );
