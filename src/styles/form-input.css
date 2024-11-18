@@ -21,15 +21,20 @@ label {
     margin-left: 8px;
 }
 
-input {
+input, textarea {
     padding: 8px;
     border: 2px solid transparent;
-    outline: 0;
     border-radius: 12px;
-    transition: all 0.1s ease-in-out;
+    transition: border 0.1s ease-in-out;
 }
 
-input:focus {
-    appearance: none;
+textarea {
+    min-height: 50px;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+input:focus, textarea:focus {
     border: 2px solid palegreen;
+    outline: none;
 }

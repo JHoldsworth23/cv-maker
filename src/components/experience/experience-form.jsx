@@ -34,7 +34,7 @@ export default function ExperienceForm({
                 <FormInput
                   id="start-date"
                   labelText="Start Date"
-                  placeholder="Start Date (MM/YYYY)"
+                  placeholder="(MM/YYYY)"
                   value={startDate}
                   onChange={onChange}
                   data-info="startDate"
@@ -42,7 +42,7 @@ export default function ExperienceForm({
                 <FormInput
                   id="end-date"
                   labelText="End Date"
-                  placeholder="End Date (MM/YYYY or Present)"
+                  placeholder="(MM/YYYY or Present)"
                   value={endDate}
                   onChange={onChange}
                   data-info="endDate"
@@ -59,7 +59,7 @@ export default function ExperienceForm({
             />
             <FormInput 
               id="description"
-            //   type="textarea"
+              type="textarea"
               labelText="Description"
               placeholder="Enter description"
               value={description}

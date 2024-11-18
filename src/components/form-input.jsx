@@ -19,14 +19,23 @@ export default function FormInput({
                 {recommended && <span className="recommended">recommended</span>}
                 {optional && <span className="optional">optional</span>}
             </label>
-            <input
-              id={id}
-              type={type}
-              placeholder={placeholder}
-              value={value}
-              onChange={onChange}
-              data-info={info}
-            />
+            {type !== "textarea" ? 
+                <input
+                  id={id}
+                  type={type}
+                  placeholder={placeholder}
+                  value={value}
+                  onChange={onChange}
+                  data-info={info}
+                /> : 
+                <textarea 
+                  id={id}
+                  placeholder={placeholder}
+                  value={value}
+                  onChange={onChange}
+                  data-info={info}
+                />
+            }
         </div>
     );
 }
