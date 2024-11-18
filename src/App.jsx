@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { exampleData } from './example-data';
 import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
-import ExperienceForm from './components/experience/experience-form';
+import ExperienceFormSection from './components/experience/experience-form-section';
 import './styles/App.css';
 
 export default function App() {
@@ -32,7 +32,7 @@ export default function App() {
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
-          <ExperienceForm {...experienceInfo} onChange={changeExperienceInfo} />
+          <ExperienceFormSection experiences={experienceInfo} onChange={changeExperienceInfo} />
           {/* FORM FOR EACH SECTION */}
         </div>
       </div>
