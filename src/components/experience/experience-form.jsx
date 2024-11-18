@@ -55,6 +55,7 @@ export default function ExperienceForm({
               value={location}
               onChange={onChange}
               data-info="location"
+              optional
             />
             <FormInput 
               id="description"
@@ -64,6 +65,7 @@ export default function ExperienceForm({
               value={description}
               onChange={onChange}
               data-info="description"
+              optional
             />
 
             {/* ADD BUTTONS TO DELETE, SAVE AND CANCEL */}

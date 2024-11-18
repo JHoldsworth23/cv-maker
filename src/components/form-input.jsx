@@ -9,6 +9,7 @@ export default function FormInput({
     value,
     "data-info": info,
     recommended,
+    optional,
     onChange,
 }) {
     return (
@@ -16,6 +17,7 @@ export default function FormInput({
             <label htmlFor={id}>
                 {labelText}
                 {recommended && <span className="recommended">recommended</span>}
+                {optional && <span className="optional">optional</span>}
             </label>
             <input
               id={id}

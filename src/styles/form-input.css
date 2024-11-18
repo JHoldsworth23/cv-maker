@@ -12,8 +12,8 @@ label {
     margin-bottom: 2px;
 }
 
-.recommended {
-    font-size: 0.8rem;
+.recommended, .optional {
+    font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 0.8px;
     color: yellow;
