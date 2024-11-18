@@ -1,3 +1,5 @@
+import uniqid from "uniqid"
+
 export const exampleData = {
     personal: {
         fullName: 'Harry Du Bois',
@@ -8,12 +10,21 @@ export const exampleData = {
     sections: {
         experience: [
             {
-                company: 'WarioWare Inc.',
+                id: uniqid(),
+                companyName: 'WarioWare Inc.',
                 role: 'Software Engineering',
                 location: 'Diamond City',
                 description: 'Developed and deployed robust software solutions, collaborating with cross-functional teams to meet business requirements and optimize performance. Led the design and implementation of scalable features, utilizing best practices in coding, testing, and version control to ensure high-quality software delivery.',
                 startDate: '10/2023',
                 endDate: '06/2024',
+            }, {
+                id: uniqid(),
+                companyName: 'WarioWare Inc. #2',
+                role: 'Software Developer',
+                location: 'Emerald City',
+                description: '',
+                startDate: '',
+                endDate: '',
             }
         ],
         education: [
