@@ -1,4 +1,4 @@
-.personal-form {
+.personal-form, .experience-form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -7,6 +7,12 @@
     padding: 12px 26px 20px;
     border-radius: 14px;
     margin: 16px 0;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
 }
 
 .form-heading {
