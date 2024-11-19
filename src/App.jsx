@@ -4,6 +4,7 @@ import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import ExperienceFormSection from './components/experience/experience-form-section';
 import './styles/App.css';
+import EducationFormSection from './components/education/education-form-section';
 
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
@@ -42,7 +43,7 @@ export default function App() {
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
           <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} />
-          {/* FORM FOR EACH SECTION */}
+          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} />
         </div>
       </div>
       <div>
