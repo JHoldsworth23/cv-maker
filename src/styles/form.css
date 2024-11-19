@@ -1,4 +1,4 @@
-.personal-form, .experience-form {
+.personal-form, .experience-form, .education-form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
