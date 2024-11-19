@@ -1,0 +1,11 @@
+.section {
+    background-color: darkorange;
+    padding-top: 12px;
+    border-radius: 14px;
+}
+
+.section-heading {
+    text-align: left;
+    margin: 0;
+    transform: translateX(26px);
+}
