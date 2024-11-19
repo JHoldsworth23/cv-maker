@@ -29,11 +29,19 @@ export const exampleData = {
         ],
         education: [
             {
+                id: uniqid(),
                 school: 'University of London',
                 study: 'BSc Computer Science',
                 location: 'London, UK',
                 startDate: '09/2022',
                 endDate: 'Present',
+            }, {
+                id: uniqid(),
+                school: 'Winterhold College',
+                study: 'Sorcery',
+                location: 'Winterhold, Skyrim',
+                startDate: '11/2011',
+                endDate: '11/2015'
             }
         ],
     }
