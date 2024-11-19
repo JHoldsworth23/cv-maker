@@ -7,7 +7,7 @@ import './styles/App.css';
 
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
-  const [experienceInfo, setExperienceInfo] = useState(exampleData.sections.experience);
+  const [sections, setSections] = useState(exampleData.sections);
 
   function loadExample() {
     setPersonalInfo(exampleData.personal);
@@ -21,8 +21,17 @@ export default function App() {
     setPersonalInfo({...personalInfo, [event.target.dataset.info]: event.target.value});
   }
 
-  function changeExperienceInfo() {
-    setExperienceInfo();
+  function changeSectionInfo(event) {
+    const form = event.target.closest('form');
+    const sectionName = form.dataset.sectionName;
+    const section = sections[sectionName];
+    setSections({
+      ...sections, 
+      [sectionName]: section.map(obj => {
+        if (obj.id === form.id) obj[event.target.dataset.info] = event.target.value;
+        return obj;
+      })
+    });
   }
 
   return (
@@ -32,7 +41,7 @@ export default function App() {
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
-          <ExperienceFormSection experiences={experienceInfo} onChange={changeExperienceInfo} />
+          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} />
           {/* FORM FOR EACH SECTION */}
         </div>
       </div>

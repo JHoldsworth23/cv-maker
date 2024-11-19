@@ -3,18 +3,22 @@ import FormInput from "../form-input";
 import "../../styles/form.css";
 
 export default function ExperienceForm(props) {
-    const { companyName, role, startDate, endDate, location, description} = props.form;
+    const { id, companyName, role, startDate, endDate, location, description} = props.form;
     const { onChange } = props;
 
     return (
-        <form className="experience-form">
+        <form 
+          className="experience-form"
+          id={id}
+          data-section-name="experience"
+        >
             <FormInput 
               id="company-name"
               labelText="Company Name"
               placeholder="Enter company name"
               value={companyName}
               onChange={onChange}
-              data-info="company"
+              data-info="companyName"
             />
             <FormInput 
               id="role"
