@@ -37,6 +37,21 @@ export default function App() {
     });
   }
 
+  function toggleValue(event, key) {
+    const form = event.target.closest('.collapsed-form');
+    const sectionName = form.dataset.sectionName;
+    const section = sections[sectionName];
+    setSections({
+      ...sections,
+      [sectionName]: section.map(obj => {
+        if (obj.id === form.id) obj[key] = !obj[key];
+        return obj;
+      })
+    });
+  }
+
+  const toggleCollapsed = (e) => toggleValue(e, "isCollapsed");
+
   return (
     <>
       <div>
@@ -44,7 +59,7 @@ export default function App() {
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
-          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} />
+          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} />
           <EducationFormSection educations={sections.education} onChange={changeSectionInfo} />
         </div>
       </div>
