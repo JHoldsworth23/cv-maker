@@ -3,7 +3,7 @@ import DisplayForm from "../display-form";
 import EducationForm from "./education-form";
 import "../../styles/form-section.css";
 
-export default function EducationFormSection({ educations, onChange }) {
+export default function EducationFormSection({ educations, onChange, toggleCollapsed }) {
     return (
         <div className="education-form-section section">
             <h2 className="section-heading">Education</h2>
@@ -12,6 +12,9 @@ export default function EducationFormSection({ educations, onChange }) {
                   forms={educations}
                   Component={EducationForm}
                   onChange={onChange}
+                  toggleCollapsed={toggleCollapsed}
+                  titleKey="school"
+                  section="education"
                 />
             </div>
         </div>

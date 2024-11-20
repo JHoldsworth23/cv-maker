@@ -13,6 +13,8 @@ export default function ExperienceFormSection({ experiences, onChange, toggleCol
                   Component={ExperienceForm}
                   onChange={onChange}
                   toggleCollapsed={toggleCollapsed}
+                  titleKey="companyName"
+                  section="experience"
                 />
             </div>
         </div>
