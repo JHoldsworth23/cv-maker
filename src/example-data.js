@@ -17,6 +17,7 @@ export const exampleData = {
                 description: 'Developed and deployed robust software solutions, collaborating with cross-functional teams to meet business requirements and optimize performance. Led the design and implementation of scalable features, utilizing best practices in coding, testing, and version control to ensure high-quality software delivery.',
                 startDate: '10/2023',
                 endDate: '06/2024',
+                isCollapsed: true,
             }, {
                 id: uniqid(),
                 companyName: 'WarioWare Inc. #2',
@@ -25,6 +26,7 @@ export const exampleData = {
                 description: '',
                 startDate: '',
                 endDate: '',
+                isCollapsed: true,
             }
         ],
         education: [
