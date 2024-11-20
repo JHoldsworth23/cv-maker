@@ -37,13 +37,15 @@ export const exampleData = {
                 location: 'London, UK',
                 startDate: '09/2022',
                 endDate: 'Present',
+                isCollapsed: true,
             }, {
                 id: uniqid(),
                 school: 'Winterhold College',
                 study: 'Sorcery',
                 location: 'Winterhold, Skyrim',
                 startDate: '11/2011',
-                endDate: '11/2015'
+                endDate: '11/2015',
+                isCollapsed: true,
             }
         ],
     }
