@@ -1,0 +1,10 @@
+.collapsed-form {
+    width: 100%;
+    border-top: 2px red solid;
+    border-bottom: 2px red solid;
+    border-radius: 0;
+}
+
+.collapsed-form:last-child {
+    border-radius: 0 0 14px 14px;
+}
