@@ -60,7 +60,7 @@ export default function App() {
         <div>
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
           <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} />
-          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} />
+          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} />
         </div>
       </div>
       <div>
