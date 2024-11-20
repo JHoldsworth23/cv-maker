@@ -12,10 +12,12 @@ export default function App() {
 
   function loadExample() {
     setPersonalInfo(exampleData.personal);
+    setSections(exampleData.sections);
   }
 
   function clearForm() {
     setPersonalInfo({ fullName: "", phoneNo: "", email: "", address: "" });
+    setSections({ experience: [], education: [] });
   }
 
   function changePersonalInfo(event) {
