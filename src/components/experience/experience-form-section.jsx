@@ -3,7 +3,7 @@ import DisplayForm from "../display-form";
 import ExperienceForm from "./experience-form";
 import "../../styles/form-section.css";
 
-export default function ExperienceFormSection({ experiences, onChange }) {
+export default function ExperienceFormSection({ experiences, onChange, toggleCollapsed }) {
     return (
         <div className="experience-form-section section">
             <h2 className="section-heading">Experience</h2>
@@ -12,6 +12,7 @@ export default function ExperienceFormSection({ experiences, onChange }) {
                   forms={experiences}
                   Component={ExperienceForm}
                   onChange={onChange}
+                  toggleCollapsed={toggleCollapsed}
                 />
             </div>
         </div>
