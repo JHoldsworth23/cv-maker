@@ -3,8 +3,9 @@ import { exampleData } from './example-data';
 import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import ExperienceFormSection from './components/experience/experience-form-section';
-import './styles/App.css';
 import EducationFormSection from './components/education/education-form-section';
+import DisplayCV from './components/display-cv';
+import './styles/App.css';
 
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
@@ -65,6 +66,7 @@ export default function App() {
       </div>
       <div>
         DISPLAY CV
+        <DisplayCV personal={personalInfo} sections={sections} />
       </div>
     </>
   );
