@@ -38,7 +38,7 @@ export default function App() {
   }
 
   function toggleValue(event, key) {
-    const form = event.target.closest('.collapsed-form');
+    const form = event.target.closest('[class$="-form"]');
     const sectionName = form.dataset.sectionName;
     const section = sections[sectionName];
     setSections({
