@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
+import Buttons from "../buttons";
 import "../../styles/form.css";
 
 export default function ExperienceForm(props) {
     const { id, companyName, role, startDate, endDate, location, description} = props.form;
-    const { onChange } = props;
+    const { onChange, save } = props;
 
     return (
         <form 
           className="experience-form"
           id={id}
           data-section-name="experience"
+          onSubmit={(e) => e.preventDefault()}
         >
             <FormInput 
               id="company-name"
@@ -65,8 +67,7 @@ export default function ExperienceForm(props) {
               data-info="description"
               optional
             />
-
-            {/* ADD BUTTONS TO DELETE, SAVE AND CANCEL */}
+            <Buttons save={save} />
         </form>
     );
 }

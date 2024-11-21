@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
+import Buttons from "../buttons";
 import "../../styles/form.css";
 
 export default function EducationForm(props) {
     const { id, school, study, startDate, endDate, location } = props.form;
-    const { onChange } = props;
+    const { onChange, save } = props;
 
     return (
         <form 
@@ -55,6 +56,7 @@ export default function EducationForm(props) {
               data-info="location"
               optional
             />
+            <Buttons save={save} />
         </form>
     );
 }
