@@ -6,7 +6,7 @@ import "../../styles/form-section.css";
 export default function ExperienceFormSection({ experiences, onChange, toggleCollapsed }) {
     return (
         <div className="experience-form-section section">
-            <h2 className="section-heading">Experience</h2>
+            <h2 className="section-heading form-heading">Experience</h2>
             <div className="experience-forms">
                 <DisplayForm 
                   forms={experiences}
@@ -17,6 +17,7 @@ export default function ExperienceFormSection({ experiences, onChange, toggleCol
                   section="experience"
                 />
             </div>
+            {/* BUTTON TO ADD NEW FORM AND DETAIL */}
         </div>
     );
 }

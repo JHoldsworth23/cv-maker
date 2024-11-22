@@ -9,7 +9,7 @@ export default function EducationForm(props) {
 
     return (
         <form 
-          className="education-form"
+          className="education-form section-form"
           id={id}
           data-section-name="education"
         >

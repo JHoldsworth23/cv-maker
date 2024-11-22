@@ -9,7 +9,7 @@ export default function ExperienceForm(props) {
 
     return (
         <form 
-          className="experience-form"
+          className="experience-form section-form"
           id={id}
           data-section-name="experience"
           onSubmit={(e) => e.preventDefault()}
