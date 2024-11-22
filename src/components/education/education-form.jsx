@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
 import Buttons from "../buttons";
-import "../../styles/form.css";
+import "../../styles/form/form.css";
 
 export default function EducationForm(props) {
     const { id, school, study, startDate, endDate, location } = props.form;

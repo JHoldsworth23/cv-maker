@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../styles/form-input.css"
+import "../styles/form/form-input.css"
 
 export default function FormInput({
     id, 

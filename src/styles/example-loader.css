@@ -31,7 +31,7 @@
 }
 
 .clear-btn:hover {
-    color: var(--bg-color);
+    color: #F2F0EA;
     border-color: var(--warning-color);
     background-color: var(--warning-color);
 }

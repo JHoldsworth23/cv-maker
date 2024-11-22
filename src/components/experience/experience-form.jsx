@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
 import Buttons from "../buttons";
-import "../../styles/form.css";
+import "../../styles/form/form.css";
 
 export default function ExperienceForm(props) {
     const { id, companyName, role, startDate, endDate, location, description} = props.form;

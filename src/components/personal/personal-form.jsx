@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import FormInput from "../form-input";
-import "../../styles/form.css";
+import "../../styles/form/form.css";
 
 export default function PersonalForm({
     fullName,

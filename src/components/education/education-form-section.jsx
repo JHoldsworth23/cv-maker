@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import DisplayForm from "../display-form";
 import EducationForm from "./education-form";
-import "../../styles/form-section.css";
+import "../../styles/form/form-section.css";
 
 export default function EducationFormSection({ educations, onChange, toggleCollapsed }) {
     return (

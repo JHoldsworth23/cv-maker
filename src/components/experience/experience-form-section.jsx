@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import DisplayForm from "../display-form";
 import ExperienceForm from "./experience-form";
-import "../../styles/form-section.css";
+import "../../styles/form/form-section.css";
 
 export default function ExperienceFormSection({ experiences, onChange, toggleCollapsed }) {
     return (

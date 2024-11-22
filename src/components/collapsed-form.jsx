@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../styles/collapsed-form.css";
+import "../styles/form/collapsed-form.css";
 
 export default function CollapsedForm({ id, title, sectionName, onClick }) {
     return (
