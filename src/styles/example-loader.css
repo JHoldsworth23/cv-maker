@@ -1,24 +1,37 @@
+:root {
+    --main-color: #17236A;
+    --warning-color: #FF0F0F;
+    --bg-color: #D6D2C2;
+}
+
 .btn-container {
     width: min-content;
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    background-color: #F2F0EA;
+    background-color: var(--bg-color);
     padding: 20px 30px;
     border-radius: 14px;
     margin: auto;
+    box-shadow: 0 0 8px #303030;
 }
 
 .load-btn, .clear-btn {
-    width: max-content;
-    font-size: 1rem;
-    background-color: #17236A;
-    border: 3px solid #17236A;
+    width: 150px;
+    font-size: 0.8rem;
+    background-color: var(--main-color);
+    border: 3px solid var(--main-color);
     transition: all 0.25s ease-in-out;
 }
 
-.load-btn:hover, .clear-btn:hover {
-    color: #17236A;
-    border-color: #17236A;
+.load-btn:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
     background-color: #F2F0EA;
+}
+
+.clear-btn:hover {
+    color: var(--bg-color);
+    border-color: var(--warning-color);
+    background-color: var(--warning-color);
 }
