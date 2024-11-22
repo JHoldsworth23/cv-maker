@@ -56,9 +56,8 @@ export default function App() {
   return (
     <>
       <div>
-        FORM SIDE
         <ExampleLoader load={loadExample} clear={clearForm}/>
-        <div>
+        <div className="forms-container">
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
           <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} />
           <EducationFormSection educations={sections.education} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} />
