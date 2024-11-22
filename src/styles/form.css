@@ -3,11 +3,16 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    width: 400px;
-    background-color: crimson;
+    width: 380px;
+    background-color: #D6D2C2;
     padding: 12px 26px 20px;
     border-radius: 14px;
-    margin: 16px 0;
+}
+
+.section-form {
+    border-top: 2px solid #444;
+    border-bottom: 1px solid #444;
+    border-radius: 0;
 }
 
 .dates {
@@ -19,6 +24,21 @@
 .form-heading {
     font-size: 1.6rem;
     text-align: start;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     margin: 6px 0;
+}
+
+.buttons {
+    padding: 10px 0 0;
+}
+
+.save-btn {
+    font-size: 0.9rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.save-btn:hover {
+    color: #000;
+    background-color: #F2F0EA;
+    border-color: #17236A;
 }
