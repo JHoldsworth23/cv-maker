@@ -1,4 +1,7 @@
 .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #D6D2C2;
     padding-top: 12px;
     border-radius: 14px;
