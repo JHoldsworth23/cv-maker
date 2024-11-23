@@ -5,7 +5,7 @@ import "../../styles/form/form.css";
 
 export default function EducationForm(props) {
     const { id, school, study, startDate, endDate, location } = props.form;
-    const { onChange, save } = props;
+    const { onChange, save, remove } = props;
 
     return (
         <form 
@@ -56,7 +56,7 @@ export default function EducationForm(props) {
               data-info="location"
               optional
             />
-            <Buttons save={save} />
+            <Buttons save={save} remove={remove} />
         </form>
     );
 }

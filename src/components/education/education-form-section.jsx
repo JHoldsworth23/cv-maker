@@ -7,7 +7,8 @@ import "../../styles/form/form-section.css";
 export default function EducationFormSection({ 
     educations, 
     onChange, 
-    toggleCollapsed, 
+    toggleCollapsed,
+    remove,
     newForm
 }) {
     return (
@@ -22,6 +23,7 @@ export default function EducationFormSection({
                   Component={EducationForm}
                   onChange={onChange}
                   toggleCollapsed={toggleCollapsed}
+                  remove={remove}
                   titleKey="school"
                   section="education"
                 />

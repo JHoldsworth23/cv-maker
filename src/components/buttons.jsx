@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
-export default function Buttons({ save }) {
+export default function Buttons({ save, remove }) {
     return (
         <div className="buttons">
+            {/* CANCEL RESTORES THE PREVIOUS INFORMATION */}
             <button className="save-btn" onClick={save} type="submit">
                 Save
             </button>
-
-            {/* CANCEL AND DELETE BUTTONS */}
+            <button className="delete-btn" onClick={remove} type="button">
+                Delete
+            </button>
         </div>
     );
 }

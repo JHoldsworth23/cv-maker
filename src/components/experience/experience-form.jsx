@@ -5,7 +5,7 @@ import "../../styles/form/form.css";
 
 export default function ExperienceForm(props) {
     const { id, companyName, role, startDate, endDate, location, description} = props.form;
-    const { onChange, save } = props;
+    const { onChange, save, remove } = props;
 
     return (
         <form 
@@ -67,7 +67,7 @@ export default function ExperienceForm(props) {
               data-info="description"
               optional
             />
-            <Buttons save={save} />
+            <Buttons save={save} remove={remove} />
         </form>
     );
 }

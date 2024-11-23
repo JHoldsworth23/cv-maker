@@ -1,7 +1,14 @@
 /* eslint-disable react/prop-types */
 import CollapsedForm from "./collapsed-form";
 
-export default function DisplayForm({ forms, Component, onChange, toggleCollapsed, titleKey, section }) {
+export default function DisplayForm({ 
+  forms, 
+  Component, 
+  onChange, 
+  toggleCollapsed,
+  remove, 
+  titleKey, 
+  section }) {
     return (
         <>
             {forms.map(form =>
@@ -18,6 +25,7 @@ export default function DisplayForm({ forms, Component, onChange, toggleCollapse
                   form={form} 
                   onChange={onChange} 
                   save={toggleCollapsed} 
+                  remove={remove}
                 />
             )}
         </>
