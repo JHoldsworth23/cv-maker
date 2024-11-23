@@ -1,9 +1,15 @@
 /* eslint-disable react/prop-types */
 import DisplayForm from "../display-form";
 import EducationForm from "./education-form";
+import AddNewForm from "../add-new-form";
 import "../../styles/form/form-section.css";
 
-export default function EducationFormSection({ educations, onChange, toggleCollapsed }) {
+export default function EducationFormSection({ 
+    educations, 
+    onChange, 
+    toggleCollapsed, 
+    newForm
+}) {
     return (
         <div className="education-form-section section">
             <h2 className="section-heading form-heading">
@@ -20,7 +26,9 @@ export default function EducationFormSection({ educations, onChange, toggleColla
                   section="education"
                 />
             </div>
-            {/* BUTTONS TO ADD NEW FORM AND DETAIL */}
+            <AddNewForm section="education" onClick={newForm}>
+                Add new Education
+            </AddNewForm>
         </div>
     );
 }

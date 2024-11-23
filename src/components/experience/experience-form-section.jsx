@@ -1,9 +1,15 @@
 /* eslint-disable react/prop-types */
 import DisplayForm from "../display-form";
 import ExperienceForm from "./experience-form";
+import AddNewForm from "../add-new-form";
 import "../../styles/form/form-section.css";
 
-export default function ExperienceFormSection({ experiences, onChange, toggleCollapsed }) {
+export default function ExperienceFormSection({ 
+    experiences, 
+    onChange, 
+    toggleCollapsed,
+    newForm
+}) {
     return (
         <div className="experience-form-section section">
             <h2 className="section-heading form-heading">
@@ -20,7 +26,9 @@ export default function ExperienceFormSection({ experiences, onChange, toggleCol
                   section="experience"
                 />
             </div>
-            {/* BUTTON TO ADD NEW FORM AND DETAIL */}
+            <AddNewForm section="experience" onClick={newForm}>
+                Add new Experience
+            </AddNewForm>
         </div>
     );
 }
