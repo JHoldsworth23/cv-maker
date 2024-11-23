@@ -40,4 +40,5 @@ textarea {
 input:focus, textarea:focus {
     border: 2px solid #17236A;
     outline: none;
+    box-shadow: 0 0 2px #1A1A1A;
 }

@@ -3,12 +3,12 @@
     background-color: #D6D2C2;
     color: #000;
     letter-spacing: 0.8px;
-    border-top: 2px solid #444;
+    border-top: 3px solid #1A1A1A;
     border-radius: 0;
 }
 
 .collapsed-form:last-child {
-    border-bottom: 2px solid #444;
+    border-bottom: 3px solid #444;
 }
 
 .collapsed-form:hover {
