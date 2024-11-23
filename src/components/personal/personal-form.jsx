@@ -11,7 +11,10 @@ export default function PersonalForm({
 }) {
     return (
         <form className="personal-form">
-            <h2 className="form-heading">Personal Details</h2>
+            <h2 className="form-heading">
+              <i className="fa-solid fa-user"></i>
+              Personal Details
+            </h2>
             <FormInput 
               id="fullName"
               labelText="Full name"

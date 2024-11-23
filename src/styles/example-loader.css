@@ -35,3 +35,7 @@
     border-color: var(--warning-color);
     background-color: var(--warning-color);
 }
+
+.fa-trash {
+    margin-right: 6px;
+}

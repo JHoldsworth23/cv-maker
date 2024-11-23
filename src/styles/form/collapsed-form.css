@@ -15,3 +15,7 @@
     color: #FEFEFE;
     background-color: rgb(165, 161, 146);
 }
+
+.collapsed-form > p {
+    margin: 8px 0;
+}
