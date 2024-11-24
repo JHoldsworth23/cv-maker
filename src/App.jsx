@@ -70,6 +70,13 @@ export default function App() {
     });
   }
 
+  function deleteForm(event) {
+    const form = event.target.closest('form');
+    const sectionName = form.dataset.sectionName;
+    const section = sections[sectionName];
+    setSections({...sections, [sectionName]: section.filter(obj => obj.id !== form.id)})
+  }
+
   function toggleValue(event, key) {
     const form = event.target.closest('[class$="-form"]');
     const sectionName = form.dataset.sectionName;
@@ -91,8 +98,8 @@ export default function App() {
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div className="forms-container">
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
-          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newExperienceForm}/>
-          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newEducationForm}/>
+          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newExperienceForm} remove={deleteForm} />
+          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newEducationForm} remove={deleteForm} />
         </div>
       </div>
       <div>
