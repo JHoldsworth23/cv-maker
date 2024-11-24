@@ -5,13 +5,14 @@ import "../../styles/form/form.css";
 
 export default function EducationForm(props) {
     const { id, school, study, startDate, endDate, location } = props.form;
-    const { onChange, save, remove } = props;
+    const { onChange, save, remove, cancel } = props;
 
     return (
         <form 
           className="education-form section-form"
           id={id}
           data-section-name="education"
+          onSubmit={(e) => e.preventDefault()}
         >
             <FormInput 
               id="school-name"
@@ -56,7 +57,7 @@ export default function EducationForm(props) {
               data-info="location"
               optional
             />
-            <Buttons save={save} remove={remove} />
+            <Buttons save={save} remove={remove} cancel={cancel} />
         </form>
     );
 }

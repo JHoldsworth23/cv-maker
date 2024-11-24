@@ -9,6 +9,7 @@ export default function ExperienceFormSection({
     onChange, 
     toggleCollapsed,
     remove,
+    cancel,
     newForm
 }) {
     return (
@@ -24,6 +25,7 @@ export default function ExperienceFormSection({
                   onChange={onChange}
                   toggleCollapsed={toggleCollapsed}
                   remove={remove}
+                  cancel={cancel}
                   titleKey="companyName"
                   section="experience"
                 />

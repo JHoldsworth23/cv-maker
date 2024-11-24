@@ -32,7 +32,7 @@
     padding: 10px 0 0;
 }
 
-.save-btn {
+.btn {
     font-size: 0.9rem;
     transition: all 0.1s ease-in-out;
 }
@@ -41,4 +41,10 @@
     color: #000;
     background-color: #F2F0EA;
     border-color: #17236A;
+}
+
+.delete-btn:hover {
+    color: #F2F0EA;
+    background-color: #FF0F0F;
+    border-color: #FF0F0F;
 }

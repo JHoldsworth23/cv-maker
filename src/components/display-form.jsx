@@ -6,7 +6,8 @@ export default function DisplayForm({
   Component, 
   onChange, 
   toggleCollapsed,
-  remove, 
+  remove,
+  cancel, 
   titleKey, 
   section }) {
     return (
@@ -26,6 +27,7 @@ export default function DisplayForm({
                   onChange={onChange} 
                   save={toggleCollapsed} 
                   remove={remove}
+                  cancel={cancel}
                 />
             )}
         </>

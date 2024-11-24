@@ -11,6 +11,7 @@ import './styles/App.css';
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
   const [sections, setSections] = useState(exampleData.sections);
+  const [prevState, setPrevState] = useState(null);
 
   function loadExample() {
     setPersonalInfo(exampleData.personal);
@@ -20,6 +21,7 @@ export default function App() {
   function clearForm() {
     setPersonalInfo({ fullName: "", phoneNo: "", email: "", address: "" });
     setSections({ experience: [], education: [] });
+    setPrevState(null);
   }
 
   function changePersonalInfo(event) {
@@ -40,6 +42,7 @@ export default function App() {
   }
 
   function createNewForm(arrayName, form) {
+    setPrevState(null);
     const section = sections[arrayName];
     section.push(form);
     setSections({...sections, [arrayName]: section});
@@ -77,6 +80,25 @@ export default function App() {
     setSections({...sections, [sectionName]: section.filter(obj => obj.id !== form.id)})
   }
 
+  function cancelForm(event) {
+    if (prevState === null) {
+      deleteForm(event);
+      return;
+    }
+
+    const form = event.target.closest('.section-form');
+    const sectionName = form.dataset.sectionName;
+    const section = sections[sectionName];
+
+    setSections({...sections, [sectionName]: section.map(obj => {
+      if (form.id === obj.id) {
+        obj = prevState;
+        obj.isCollapsed = true;
+      }
+      return obj;
+    })});
+  }
+
   function toggleValue(event, key) {
     const form = event.target.closest('[class$="-form"]');
     const sectionName = form.dataset.sectionName;
@@ -84,7 +106,10 @@ export default function App() {
     setSections({
       ...sections,
       [sectionName]: section.map(obj => {
-        if (obj.id === form.id) obj[key] = !obj[key];
+        if (obj.id === form.id) {
+          setPrevState(Object.assign({}, obj));
+          obj[key] = !obj[key]
+        };
         return obj;
       })
     });
@@ -98,14 +123,28 @@ export default function App() {
         <ExampleLoader load={loadExample} clear={clearForm}/>
         <div className="forms-container">
           <PersonalForm {...personalInfo} onChange={changePersonalInfo}/>
-          <ExperienceFormSection experiences={sections.experience} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newExperienceForm} remove={deleteForm} />
-          <EducationFormSection educations={sections.education} onChange={changeSectionInfo} toggleCollapsed={toggleCollapsed} newForm={newEducationForm} remove={deleteForm} />
+          <ExperienceFormSection 
+            experiences={sections.experience} 
+            onChange={changeSectionInfo} 
+            toggleCollapsed={toggleCollapsed} 
+            newForm={newExperienceForm} 
+            remove={deleteForm}
+            cancel={cancelForm}
+          />
+          <EducationFormSection 
+            educations={sections.education} 
+            onChange={changeSectionInfo} 
+            toggleCollapsed={toggleCollapsed} 
+            newForm={newEducationForm} 
+            remove={deleteForm}
+            cancel={cancelForm}
+          />
         </div>
       </div>
-      <div>
+      {/* <div>
         DISPLAY CV
         <DisplayCV personal={personalInfo} sections={sections} />
-      </div>
+      </div> */}
     </>
   );
 }
