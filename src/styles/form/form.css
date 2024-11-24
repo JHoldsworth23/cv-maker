@@ -29,7 +29,15 @@
 }
 
 .buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 12px;
     padding: 10px 0 0;
+}
+
+.delete-btn {
+    margin-right: auto;
 }
 
 .btn {
@@ -37,7 +45,7 @@
     transition: all 0.1s ease-in-out;
 }
 
-.save-btn:hover {
+.save-btn:hover, .cancel-btn:hover {
     color: #000;
     background-color: #F2F0EA;
     border-color: #17236A;
