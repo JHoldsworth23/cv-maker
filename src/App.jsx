@@ -5,12 +5,13 @@ import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import ExperienceFormSection from './components/experience/experience-form-section';
 import EducationFormSection from './components/education/education-form-section';
-import DisplayCV from './components/display-cv';
+// import DisplayCV from './components/display-cv';
 import './styles/App.css';
 
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState(exampleData.personal);
   const [sections, setSections] = useState(exampleData.sections);
+  const [openSection, setOpenSection] = useState(null);
   const [prevState, setPrevState] = useState(null);
 
   function loadExample() {
@@ -119,6 +120,8 @@ export default function App() {
 
   const toggleCollapsed = (e) => toggleValue(e, "isCollapsed");
 
+  const setOpen = (sectionName) => {setOpenSection(sectionName)};
+
   return (
     <>
       <div>
@@ -132,6 +135,8 @@ export default function App() {
             newForm={newExperienceForm} 
             remove={deleteForm}
             cancel={cancelForm}
+            isOpen={openSection === "Experience"}
+            setOpen={setOpen}
           />
           <EducationFormSection 
             educations={sections.education} 
@@ -140,11 +145,12 @@ export default function App() {
             newForm={newEducationForm} 
             remove={deleteForm}
             cancel={cancelForm}
+            isOpen={openSection === "Education"}
+            setOpen={setOpen}
           />
         </div>
       </div>
       {/* <div>
-        DISPLAY CV
         <DisplayCV personal={personalInfo} sections={sections} />
       </div> */}
     </>
