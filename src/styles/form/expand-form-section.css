@@ -1,0 +1,26 @@
+.expand-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D6D2C2;
+    color: #000;
+}
+
+.section-heading {
+    text-align: left;
+    transform: translateX(26px);
+}
+
+.form-heading > i {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+h2 + i {
+    font-size: 20px;
+    margin: 10px 12px 0 0;
+}
+
+.open {
+    transform: rotate(180deg);
+}

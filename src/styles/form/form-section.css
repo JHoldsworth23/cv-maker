@@ -3,17 +3,28 @@
     flex-direction: column;
     justify-content: center;
     background-color: #D6D2C2;
-    padding-top: 12px;
     border-radius: 14px;
 }
 
-.section-heading {
-    text-align: left;
-    margin: 0 0 12px;
-    transform: translateX(26px);
+.open-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: open-menu 0.8s ease;
+    transform-origin: top;
 }
 
-.form-heading > i {
-    font-size: 1.5rem;
-    margin-right: 8px;
+.hide-section {
+    display: none;
+    animation: close-menu 0.8s ease;
+    transform-origin: top;
+}
+
+@keyframes open-menu {
+    from {
+        transform: scaleY(0);
+    } 
+    to {
+        transform: scaleY(1);
+    }
 }
