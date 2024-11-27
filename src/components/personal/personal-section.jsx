@@ -10,9 +10,9 @@ export default function PersonalSection(props) {
                 <h2>{fullName}</h2>
             </div>
             <div className="contact-details">
-                {phoneNo && <p>{phoneNo}</p>}
-                {email && <p>{email}</p>}
-                {address && <p>{address}</p>}
+                {email && <div className="detail"><i className="fa-solid fa-envelope"></i><p>{email}</p></div>}
+                {phoneNo && <div className="detail"><i className="fa-solid fa-phone"></i><p>{phoneNo}</p></div>}
+                {address && <div className="detail"><i className="fa-solid fa-location-dot"></i><p>{address}</p></div>}
             </div>
         </div>
     );
