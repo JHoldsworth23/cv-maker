@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import ExpandFormSection from "../expand-form-section";
 import DisplayForm from "../display-form";
 import ExperienceForm from "./experience-form";
 import AddNewForm from "../add-new-form";
@@ -10,29 +11,35 @@ export default function ExperienceFormSection({
     toggleCollapsed,
     remove,
     cancel,
-    newForm
+    newForm,
+    isOpen,
+    setOpen
 }) {
     return (
         <div className="experience-form-section section">
-            <h2 className="section-heading form-heading">
-                <i className="fa-solid fa-briefcase"></i>
-                Experience
-            </h2>
-            <div className="experience-forms">
-                <DisplayForm 
-                  forms={experiences}
-                  Component={ExperienceForm}
-                  onChange={onChange}
-                  toggleCollapsed={toggleCollapsed}
-                  remove={remove}
-                  cancel={cancel}
-                  titleKey="companyName"
-                  section="experience"
-                />
+            <ExpandFormSection 
+              title="Experience"
+              icon="fa-solid fa-briefcase"
+              isOpen={isOpen}
+              setOpen={setOpen}
+            />
+            <div className={isOpen ? "open-section" : "hide-section"}>
+                <div className="experience-forms">
+                    <DisplayForm
+                      forms={experiences}
+                      Component={ExperienceForm}
+                      onChange={onChange}
+                      toggleCollapsed={toggleCollapsed}
+                      remove={remove}
+                      cancel={cancel}
+                      titleKey="companyName"
+                      section="experience"
+                    />
+                </div>
+                <AddNewForm section="experience" onClick={newForm}>
+                    Add new Experience
+                </AddNewForm>
             </div>
-            <AddNewForm section="experience" onClick={newForm}>
-                Add new Experience
-            </AddNewForm>
         </div>
     );
 }

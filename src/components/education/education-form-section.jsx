@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import ExpandFormSection from "../expand-form-section";
 import DisplayForm from "../display-form";
 import EducationForm from "./education-form";
 import AddNewForm from "../add-new-form";
@@ -10,29 +11,35 @@ export default function EducationFormSection({
     toggleCollapsed,
     remove,
     cancel,
-    newForm
+    newForm,
+    isOpen,
+    setOpen
 }) {
     return (
         <div className="education-form-section section">
-            <h2 className="section-heading form-heading">
-                <i className="fa-solid fa-graduation-cap"></i>
-                Education
-            </h2>
-            <div className="education-forms">
-                <DisplayForm
-                  forms={educations}
-                  Component={EducationForm}
-                  onChange={onChange}
-                  toggleCollapsed={toggleCollapsed}
-                  remove={remove}
-                  cancel={cancel}
-                  titleKey="school"
-                  section="education"
-                />
+            <ExpandFormSection 
+              title="Education"
+              icon="fa-solid fa-graduation-cap"
+              isOpen={isOpen}
+              setOpen={setOpen}
+            />
+            <div className={isOpen ? "open-section" : "hide-section"}>
+                <div className="education-forms">
+                    <DisplayForm
+                      forms={educations}
+                      Component={EducationForm}
+                      onChange={onChange}
+                      toggleCollapsed={toggleCollapsed}
+                      remove={remove}
+                      cancel={cancel}
+                      titleKey="school"
+                      section="education"
+                    />
+                </div>
+                <AddNewForm section="education" onClick={newForm}>
+                    Add new Education
+                </AddNewForm>
             </div>
-            <AddNewForm section="education" onClick={newForm}>
-                Add new Education
-            </AddNewForm>
         </div>
     );
 }
