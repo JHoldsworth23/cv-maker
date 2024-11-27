@@ -108,8 +108,10 @@ export default function App() {
       [sectionName]: section.map(obj => {
         if (obj.id === form.id) {
           setPrevState(Object.assign({}, obj));
-          obj[key] = !obj[key]
-        };
+          obj[key] = !obj[key];
+        } else {
+          obj[key] = true;
+        }
         return obj;
       })
     });
