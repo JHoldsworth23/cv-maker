@@ -5,7 +5,7 @@ import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import ExperienceFormSection from './components/experience/experience-form-section';
 import EducationFormSection from './components/education/education-form-section';
-// import DisplayCV from './components/display-cv';
+import DisplayCV from './components/display-cv';
 import './styles/App.css';
 
 export default function App() {
@@ -150,9 +150,9 @@ export default function App() {
           />
         </div>
       </div>
-      {/* <div>
+      <div>
         <DisplayCV personal={personalInfo} sections={sections} />
-      </div> */}
+      </div>
     </>
   );
 }
