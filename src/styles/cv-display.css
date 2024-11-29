@@ -3,3 +3,7 @@
     min-height: 110vh;
     background-color: #FEFEFE;
 }
+
+.information-display {
+    padding: 16px 42px;
+}
