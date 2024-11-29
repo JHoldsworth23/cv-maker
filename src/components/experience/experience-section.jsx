@@ -1,14 +1,23 @@
 /* eslint-disable react/prop-types */
+import "../../styles/cv-experience-section.css";
+
 export default function ExperienceSection(props) {
+    const { startDate, endDate, location, companyName, role, description } = props;
+
     return (
         <>
-            <div>
-                <p>{props.location}</p>
+            <div className="experience-info">
+                <p className="dates-info">
+                    {startDate}
+                    {startDate && endDate && <span> - </span>}
+                    {endDate}
+                </p>
+                <p className="location-info">{location}</p>
             </div>
             <div>
-                <p>{props.companyName}</p>
-                <p>{props.role}</p>
-                <p>{props.description}</p>
+                <p className="company-title">{companyName}</p>
+                <p className="role">{role}</p>
+                <p className="description">{description}</p>
             </div>
         </>
     );
