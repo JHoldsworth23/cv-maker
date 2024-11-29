@@ -1,0 +1,18 @@
+.section-title-div {
+    background-color: rgba(220, 20, 60, 0.5);
+    padding: 2px 0;
+    text-align: center;
+}
+
+.section-title {
+    letter-spacing: 0.6px;
+    margin: 0;
+}
+
+.experience-section, .education-section {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 12px;
+    letter-spacing: 0.2px;
+    margin: 6px 0;
+}
