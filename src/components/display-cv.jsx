@@ -4,12 +4,14 @@ import CVSection from "./cv-section";
 import "../styles/cv-display.css";
 
 export default function DisplayCV({ personal, sections }) {
+    const { experience, education } = sections;
+
     return (
         <div className="cv-display">
             <PersonalSection information={personal} />
             <div className="information-display">
-                <CVSection title="Professional Experience" section={sections.experience} />
-                <CVSection title="Education" section={sections.education} />
+                {experience.length > 0 && <CVSection title="Professional Experience" section={experience} />}
+                {education.length > 0 && <CVSection title="Education" section={education} />}
             </div>
         </div>
     );
