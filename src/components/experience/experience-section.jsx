@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../../styles/cv-experience-section.css";
+import "../../styles/cv-information-section.css";
 
 export default function ExperienceSection(props) {
     const { startDate, endDate, location, companyName, role, description } = props;
