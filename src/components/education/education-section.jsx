@@ -1,13 +1,22 @@
 /* eslint-disable react/prop-types */
+import "../../styles/cv-information-section.css";
+
 export default function EducationSection(props) {
+    const { startDate, endDate, location, school, study } = props;
+
     return (
         <>
-            <div>
-                <p>{props.location}</p>
+            <div className="education-info">
+                <p className="dates-info">
+                    {startDate}
+                    {startDate && endDate && <span> - </span>}
+                    {endDate}
+                </p>
+                <p className="location-info">{location}</p>
             </div>
             <div>
-                <p>{props.school}</p>
-                <p>{props.study}</p>
+                <p className="school-name">{school}</p>
+                <p className="degree">{study}</p>
             </div>
         </>
     );
