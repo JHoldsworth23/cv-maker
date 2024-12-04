@@ -6,7 +6,7 @@ import "../styles/cv-section.css";
 export default function CVSection({ title, section }) {
     return (
         <>
-            <div className="section-title-div">
+            <div className={"section-title-div " + title.toLowerCase()}>
                 <h3 className="section-title">{title}</h3>
             </div>
             {title.match("Experience")
