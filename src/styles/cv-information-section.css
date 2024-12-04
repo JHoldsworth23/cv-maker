@@ -1,0 +1,23 @@
+.experience-info > p:empty,
+.education-info > p:empty {
+    display: none;
+}
+
+.experience-info, .education-info {
+    width: 140px;
+}
+
+.company-title, .school-name {
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+.dates-info, 
+.location-info, 
+.company-title, 
+.role, 
+.description, 
+.school-name, 
+.degree {
+    margin: 2px 0;
+}
