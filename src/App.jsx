@@ -59,6 +59,7 @@ export default function App() {
       startDate: '',
       endDate: '',
       isCollapsed: false,
+      isHidden: false,
     });
   }
 
@@ -71,6 +72,7 @@ export default function App() {
       startDate: '',
       endDate: '',
       isCollapsed: false,
+      isHidden: false,
     });
   }
 
@@ -110,7 +112,7 @@ export default function App() {
         if (obj.id === form.id) {
           setPrevState(Object.assign({}, obj));
           obj[key] = !obj[key];
-        } else {
+        } else if (key === "isCollapsed") {
           obj[key] = true;
         }
         return obj;
@@ -119,6 +121,7 @@ export default function App() {
   }
 
   const toggleCollapsed = (e) => toggleValue(e, "isCollapsed");
+  const toggleVisibility = (e) => toggleValue(e, "isHidden")
 
   const setOpen = (sectionName) => {setOpenSection(sectionName)};
 
@@ -131,7 +134,8 @@ export default function App() {
           <ExperienceFormSection 
             experiences={sections.experience} 
             onChange={changeSectionInfo} 
-            toggleCollapsed={toggleCollapsed} 
+            toggleCollapsed={toggleCollapsed}
+            toggleVisibility={toggleVisibility}
             newForm={newExperienceForm} 
             remove={deleteForm}
             cancel={cancelForm}
@@ -141,7 +145,8 @@ export default function App() {
           <EducationFormSection 
             educations={sections.education} 
             onChange={changeSectionInfo} 
-            toggleCollapsed={toggleCollapsed} 
+            toggleCollapsed={toggleCollapsed}
+            toggleVisibility={toggleVisibility}
             newForm={newEducationForm} 
             remove={deleteForm}
             cancel={cancelForm}
