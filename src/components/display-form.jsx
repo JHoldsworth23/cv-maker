@@ -6,20 +6,23 @@ export default function DisplayForm({
   Component, 
   onChange, 
   toggleCollapsed,
+  toggleVisibility,
   remove,
   cancel, 
   titleKey, 
-  section }) {
+  section 
+}) {
     return (
         <>
             {forms.map(form =>
                 form.isCollapsed ?
                 <CollapsedForm 
                   key={form.id} 
-                  id={form.id} 
+                  form={form} 
                   title={form[titleKey]}
                   sectionName={section} 
-                  onClick={toggleCollapsed} 
+                  onClick={toggleCollapsed}
+                  changeVisibility={toggleVisibility}
                 /> :
                 <Component 
                   key={form.id} 

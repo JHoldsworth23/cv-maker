@@ -9,6 +9,7 @@ export default function EducationFormSection({
     educations, 
     onChange, 
     toggleCollapsed,
+    toggleVisibility,
     remove,
     cancel,
     newForm,
@@ -30,6 +31,7 @@ export default function EducationFormSection({
                       Component={EducationForm}
                       onChange={onChange}
                       toggleCollapsed={toggleCollapsed}
+                      toggleVisibility={toggleVisibility}
                       remove={remove}
                       cancel={cancel}
                       titleKey="school"
