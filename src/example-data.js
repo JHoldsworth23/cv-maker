@@ -18,6 +18,7 @@ export const exampleData = {
                 startDate: '10/2023',
                 endDate: '06/2024',
                 isCollapsed: true,
+                isHidden: false,
             }, {
                 id: uniqid(),
                 companyName: 'WarioWare Inc. #2',
@@ -27,6 +28,7 @@ export const exampleData = {
                 startDate: '',
                 endDate: '',
                 isCollapsed: true,
+                isHidden: false,
             }
         ],
         education: [
@@ -38,6 +40,7 @@ export const exampleData = {
                 startDate: '09/2022',
                 endDate: 'Present',
                 isCollapsed: true,
+                isHidden: false,
             }, {
                 id: uniqid(),
                 school: 'Winterhold College',
@@ -46,6 +49,7 @@ export const exampleData = {
                 startDate: '11/2011',
                 endDate: '11/2015',
                 isCollapsed: true,
+                isHidden: true,
             }
         ],
     }
