@@ -10,16 +10,24 @@ export default function CVSection({ title, section }) {
                 <h3 className="section-title">{title}</h3>
             </div>
             {title.match("Experience")
-                ? section.map(experience => 
-                    <div key={experience.id} className="experience-section">
-                        <ExperienceSection {...experience} />
-                    </div>
-                )
-                : section.map(education => 
-                    <div key={education.id} className="education-section">
-                        <EducationSection {...education} />
-                    </div>
-                )}
+                ? section.map(experience => {
+                    if (!experience.isHidden) {
+                        return (
+                            <div key={experience.id} className="experience-section">
+                                <ExperienceSection {...experience} />
+                            </div>
+                        );
+                    }
+                })
+                : section.map(education => {
+                    if (!education.isHidden) {
+                        return (
+                            <div key={education.id} className="education-section">
+                                <EducationSection {...education} />
+                            </div>
+                        );
+                    }
+                })}
         </>
     );
 }
