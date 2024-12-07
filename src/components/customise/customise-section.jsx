@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import ExpandFormSection from "../expand-form-section";
+import CustomiseColor from "./customise-color";
+import "../../styles/customise-section.css";
 
 export default function CustomiseSection({
     isOpen,
@@ -14,7 +16,9 @@ export default function CustomiseSection({
               setOpen={setOpen}
             />
             <div className={isOpen ? "open-section" : "hide-section"}>
-                COLOR, FONT, LAYOUT
+                <CustomiseColor />
+                {/* LAYOUT */}
+                {/* FONTS */}
             </div>
         </div>
     );
