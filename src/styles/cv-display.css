@@ -1,3 +1,8 @@
+:root {
+    --cv-header-bg-color: #1c1c84;
+    --cv-text-color: white;
+}
+
 .cv-display {
     width: 42vw;
     min-height: 110vh;

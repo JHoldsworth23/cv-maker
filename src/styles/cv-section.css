@@ -1,5 +1,5 @@
 .section-title-div {
-    background-color: rgba(220, 20, 60, 0.5);
+    background-color: var(--cv-header-bg-color);
     padding: 2px 0;
     text-align: center;
 }
@@ -9,6 +9,7 @@
 }
 
 .section-title {
+    color: var(--cv-text-color);
     letter-spacing: 0.6px;
     margin: 0;
 }

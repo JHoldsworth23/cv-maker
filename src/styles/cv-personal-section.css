@@ -1,6 +1,6 @@
 .personal-section {
-    color: black;
-    background-color: chartreuse;
+    color: var(--cv-text-color);
+    background-color: var(--cv-header-bg-color);
     padding: 24px 0;
 }
 
