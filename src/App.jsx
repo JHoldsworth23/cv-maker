@@ -5,6 +5,7 @@ import ExampleLoader from './components/example-loader';
 import PersonalForm from './components/personal/personal-form';
 import ExperienceFormSection from './components/experience/experience-form-section';
 import EducationFormSection from './components/education/education-form-section';
+import CustomiseSection from './components/customise/customise-section';
 import DisplayCV from './components/display-cv';
 import './styles/App.css';
 
@@ -151,6 +152,10 @@ export default function App() {
             remove={deleteForm}
             cancel={cancelForm}
             isOpen={openSection === "Education"}
+            setOpen={setOpen}
+          />
+          <CustomiseSection 
+            isOpen={openSection === "Customise"}
             setOpen={setOpen}
           />
         </div>
