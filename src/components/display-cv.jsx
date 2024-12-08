@@ -3,11 +3,11 @@ import PersonalSection from "./personal/personal-section";
 import CVSection from "./cv-section";
 import "../styles/cv-display.css";
 
-export default function DisplayCV({ personal, sections }) {
+export default function DisplayCV({ personal, sections, layout }) {
     const { experience, education } = sections;
 
     return (
-        <div className="cv-display">
+        <div className={`cv-display ${layout}`}>
             <PersonalSection information={personal} />
             <div className="information-display">
                 {experience.length > 0 && <CVSection title="Professional Experience" section={experience} />}
