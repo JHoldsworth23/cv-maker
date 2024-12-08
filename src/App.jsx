@@ -14,6 +14,7 @@ export default function App() {
   const [sections, setSections] = useState(exampleData.sections);
   const [openSection, setOpenSection] = useState(null);
   const [prevState, setPrevState] = useState(null);
+  const [CVlayout, setCVLayout] = useState("top");
 
   function loadExample() {
     setPersonalInfo(exampleData.personal);
@@ -157,11 +158,12 @@ export default function App() {
           <CustomiseSection 
             isOpen={openSection === "Customise"}
             setOpen={setOpen}
+            changeLayout={setCVLayout}
           />
         </div>
       </div>
       <div>
-        <DisplayCV personal={personalInfo} sections={sections} />
+        <DisplayCV personal={personalInfo} sections={sections} layout={CVlayout} />
       </div>
     </>
   );
