@@ -21,12 +21,12 @@ export const exampleData = {
                 isHidden: false,
             }, {
                 id: uniqid(),
-                companyName: 'WarioWare Inc. #2',
-                role: 'Software Developer',
-                location: 'Emerald City',
-                description: '',
-                startDate: '',
-                endDate: '',
+                companyName: 'Fox Hound',
+                role: 'Metal Gear AI Developer',
+                location: 'Shadow Moses',
+                description: 'Developed advanced AI algorithms for targeting systems, significantly improving accuracy and operational efficiency in military applications. Led the integration of AI-driven technologies into weapon systems, enhancing real-time decision-making and reducing response times by 40%.',
+                startDate: '03/2020',
+                endDate: '06/2023',
                 isCollapsed: true,
                 isHidden: false,
             }
