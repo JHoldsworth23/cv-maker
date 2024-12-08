@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import ExperienceSection from "./experience/experience-section";
 import EducationSection from "./education/education-section";
-import "../styles/cv-section.css";
+import "../styles/cv/cv-section.css";
 
 export default function CVSection({ title, section }) {
     return (

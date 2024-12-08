@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import PersonalSection from "./personal/personal-section";
 import CVSection from "./cv-section";
-import "../styles/cv-display.css";
+import "../styles/cv/cv-display.css";
 
 export default function DisplayCV({ personal, sections, layout }) {
     const { experience, education } = sections;

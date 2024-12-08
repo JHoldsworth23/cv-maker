@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../../styles/cv-personal-section.css";
+import "../../styles/cv/cv-personal-section.css";
 
 export default function PersonalSection(props) {
     const { fullName, phoneNo, email, address } = props.information;
