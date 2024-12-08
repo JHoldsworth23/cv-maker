@@ -2,6 +2,7 @@
 import ExpandFormSection from "../expand-form-section";
 import CustomiseColor from "./customise-color";
 import CustomiseLayout from "./customise-layout";
+import CustomiseFont from "./customise-font";
 import "../../styles/customise-section.css";
 
 export default function CustomiseSection({
@@ -20,7 +21,7 @@ export default function CustomiseSection({
             <div className={isOpen ? "open-section" : "hide-section"}>
                 <CustomiseColor />
                 <CustomiseLayout changeLayout={changeLayout} />
-                {/* FONTS */}
+                <CustomiseFont />
             </div>
         </div>
     );
