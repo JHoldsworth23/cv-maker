@@ -35,7 +35,7 @@ h3 {
     border: 2px solid #000000;
 }
 
-.layout-buttons {
+.layout-buttons, .font-buttons {
     display: flex;
     gap: 24px;
 }
@@ -44,6 +44,12 @@ h3 {
     background-color: transparent;
     color: #000;
     padding: 0;
+    font-weight: bold;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.layout-buttons > button:hover {
+    opacity: 0.7;
 }
 
 div[class$="layout"] {
@@ -51,16 +57,45 @@ div[class$="layout"] {
     height: 50px;
     border: 1px solid #1A1A1A;
     border-radius: 8px;
+    margin-bottom: 2px;
 }
 
 .top-layout {
-    background: linear-gradient(180deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
+    background: linear-gradient(180deg, var(--cv-header-bg-color) 50%, #FEFEFE 50%);
 }
 
 .left-layout {
-    background: linear-gradient(90deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
+    background: linear-gradient(90deg, var(--cv-header-bg-color) 50%, #FEFEFE 50%);
 }
 
 .right-layout {
-    background: linear-gradient(270deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
+    background: linear-gradient(270deg, var(--cv-header-bg-color) 50%, #FEFEFE 50%);
+}
+
+.font-btn {
+    width: 55px;
+    height: 55px;
+    padding: 2px;
+    border: 2px solid #1A1A1A;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.font-btn:hover {
+    background-color: #F2F0EA;
+    color: #1A1A1A;
+}
+
+.font-test {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.serif {
+    font-family: 'Garamond', serif;
+}
+
+.mono {
+    font-family: monospace;
 }
