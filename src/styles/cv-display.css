@@ -9,6 +9,44 @@
     background-color: #FEFEFE;
 }
 
-.information-display {
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.left > .personal-section,
+.right > .personal-section {
+    width: 40%;
+    padding: 30px;
+}
+
+.left .contact-details,
+.right .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: fit-content;
+}
+
+.left .detail p,
+.right .detail p {
+    margin: 4px;
+}
+
+.top > .information-display {
     padding: 16px 42px;
+}
+
+.left > .information-display,
+.right > .information-display {
+    padding: 30px;
 }

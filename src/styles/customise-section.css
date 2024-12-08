@@ -3,9 +3,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding: 0 40px;
-    border-top: 2px solid #1A1A1A;
-    border-bottom: 2px solid #1A1A1A;
+    padding: 10px 40px;
+    border-top: 3px solid #1A1A1A;
+}
+
+.customise-div:last-child {
+    border-bottom: 3px solid #1A1A1A;
 }
 
 h3 {
@@ -17,8 +20,9 @@ h3 {
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
     border: none;
     cursor: pointer;
 }
@@ -29,4 +33,34 @@ h3 {
 #color-wheel::-moz-color-swatch {
     border-radius: 50%;
     border: 2px solid #000000;
+}
+
+.layout-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.layout-buttons > button {
+    background-color: transparent;
+    color: #000;
+    padding: 0;
+}
+
+div[class$="layout"] {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1A1A1A;
+    border-radius: 8px;
+}
+
+.top-layout {
+    background: linear-gradient(180deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
+}
+
+.left-layout {
+    background: linear-gradient(90deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
+}
+
+.right-layout {
+    background: linear-gradient(270deg, var(--cv-header-bg-color) 50%, #D6D2C2 50%);
 }
